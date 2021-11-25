@@ -17,8 +17,12 @@ title: Reimagined Journey
       coneGeometry,
       new THREE.MeshBasicMaterial({color: 0xededbe})
     )
-    var directionalLight = new THREE.DirectionalLight(0xffff00, 0.75)
-    var hemisphereLight = new THREE.HemisphereLight(0xffffbb, 0x080820)
+    var directionalLight = new THREE.DirectionalLightHelper(
+      new THREE.DirectionalLight(0xffff00, 0.75)
+    )
+    var hemisphereLight = new THREE.HemisphereLightHelper(
+      new THREE.HemisphereLight(0xffffbb, 0x080820)
+    )
     scene.add(cone)
     scene.add(camera)
     scene.add(directionalLight)
