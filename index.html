@@ -1,0 +1,33 @@
+---
+layout: main
+title: Remimagined Journey
+---
+<p>Welcome to your &mdash; wait! You're somewhere different! Back in 1000 BCE in the Brugyptian Era. Fancy a look?</p>
+<div id="house">
+</div>
+<script>
+  (function() {
+    // Essentials
+    var scene = new THREE.Scene()
+    var camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000)
+    var renderer = new THREE.WebGLRenderer()
+    // Things
+    var coneGeometry = new THREE.ConeGeometry(2)
+    var cone = new THREE.Mesh(
+      coneGeometry,
+      new THREE.MeshBasicMaterial({color: 0xededbe})
+    )
+    var directionalLight = new THREE.DirectionalLight(0xffff00, 0.75)
+    scene.add(cone)
+    scene.add(camera)
+    scene.add(directionalLight)
+    camera.position.z = 5
+    directionalLight.position.z = 10
+    renderer.setSize(500, 500)
+    document.getElementById("house").appendChild(renderer.domElement)
+    function animate() {
+      requestAnimationFrame(animate)
+      renderer.render(scene, camera)
+    }
+  }).call()
+</script>
