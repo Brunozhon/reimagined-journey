@@ -1,6 +1,6 @@
 ---
 layout: main
-title: Remimagined Journey
+title: Reimagined Journey
 ---
 <p>Welcome to your &mdash; wait! You're somewhere different! Back in 1000 BCE in the Brugyptian Era. Fancy a look?</p>
 <div id="house">
@@ -12,7 +12,7 @@ title: Remimagined Journey
     var camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000)
     var renderer = new THREE.WebGLRenderer()
     // Things
-    var coneGeometry = new THREE.ConeGeometry(2)
+    var coneGeometry = new THREE.ConeGeometry(2, 5)
     var cone = new THREE.Mesh(
       coneGeometry,
       new THREE.MeshBasicMaterial({color: 0xededbe})
