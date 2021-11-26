@@ -17,8 +17,20 @@ title: Reimagined Journey
       coneGeometry,
       new THREE.MeshBasicMaterial({color: 0xededbe})
     )
+    var cone2 = new THREE.Mesh(
+      coneGeometry,
+      new THREE.MeshBasicMaterial({color: 0xededbe})
+    )
+    var cone3 = new THREE.Mesh(
+      coneGeometry,
+      new THREE.MeshBasicMaterial({color: 0xededbe})
+    )
     scene.add(cone)
+    scene.add(cone2)
+    scene.add(cone3)
     scene.add(camera)
+    cone2.position.x = 2
+    cone3.position.x = -2
     camera.position.z = 5
     renderer.setSize(500, 500)
     document.getElementById("house").appendChild(renderer.domElement)
