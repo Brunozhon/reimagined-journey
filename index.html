@@ -37,7 +37,9 @@ title: Reimagined Journey
     function animate() {
       requestAnimationFrame(animate)
       renderer.render(scene, camera)
-      cone.rotation.y += 0.001
+      cone.rotation.y += 0.01
+      cone2.rotation.y += 0.01
+      cone3.rotation.y += 0.01
     }
     animate()
   }).call()
