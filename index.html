@@ -17,25 +17,15 @@ title: Reimagined Journey
       coneGeometry,
       new THREE.MeshBasicMaterial({color: 0xededbe})
     )
-    var directionalLight = new THREE.DirectionalLightHelper(
-      new THREE.DirectionalLight(0xffff00, 0.75)
-    )
-    var hemisphereLight = new THREE.HemisphereLightHelper(
-      new THREE.HemisphereLight(0xffffbb, 0x080820), 20
-    )
     scene.add(cone)
     scene.add(camera)
-    scene.add(directionalLight)
-    scene.add(hemisphereLight)
     camera.position.z = 5
-    directionalLight.position.z = 10
-    hemisphereLight.position.z = 10
     renderer.setSize(500, 500)
     document.getElementById("house").appendChild(renderer.domElement)
     function animate() {
       requestAnimationFrame(animate)
       renderer.render(scene, camera)
-      cone.rotation.y += 0.005
+      cone.rotation.y += 0.001
     }
     animate()
   }).call()
